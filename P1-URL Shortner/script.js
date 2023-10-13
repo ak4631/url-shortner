@@ -5,10 +5,8 @@ const to_display = document.querySelector("#display_url");
 const to_reload = document.querySelector("#reset_page");
 get_url.onclick = () => {
   const to_short = text_box.value;
-  console.log(to_short);
   var apiURL =
     "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(to_short);
-  // to_display.innerHTML = to_short;
   fetch(apiURL)
     .then((res) => res.text())
     .then((data) => {
